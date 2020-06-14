@@ -5,6 +5,7 @@
         <p id="pname"> </p>
         <p id="type1"></p>
         <p id="type2"></p>
+        <img id="sprite">
 
         <script>
             function getStuff() {
@@ -20,6 +21,7 @@
             function pokeElements(data) {
                 document.getElementById("pname").innerHTML = data.name;
                 document.getElementById("type1").innerHTML = data.types[0].type.name;
+                document.getElementById("sprite").src= "https://projectpokemon.org/images/normal-sprite/" + data.name.toString() + ".gif";
                 try {
                     document.getElementById("type2").innerHTML = data.types[1].type.name;
                 }
@@ -28,5 +30,6 @@
                 }
             }
         </script>
+
     </body>
 </html>
