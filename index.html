@@ -1,35 +1,17 @@
 <!DOCTYPE html>
 <html>
     <body>
-        <p>stuff goes here!</p>
+        <head>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script src="random.js"></script>
+        </head>
+        <div>
+            <button onclick="main()">Click to generate your random Pokemon</button>
+        </div>
+        <p id="counter"></p>
+        <img id="sprite">
         <p id="pname"> </p>
         <p id="type1"></p>
         <p id="type2"></p>
-        <img id="sprite">
-
-        <script>
-            function getStuff() {
-                var randomnum = (Math.floor(Math.random() * 151) + 1);
-                var url = "https://pokeapi.co/api/v2/pokemon/" + randomnum.toString();
-                fetch(url)
-                .then((resp) => resp.json())
-                .then(function(pokeData){pokeElements(pokeData)})
-            }
-            getStuff()
-        </script>
-        <script>
-            function pokeElements(data) {
-                document.getElementById("pname").innerHTML = data.name;
-                document.getElementById("type1").innerHTML = data.types[0].type.name;
-                document.getElementById("sprite").src= "https://projectpokemon.org/images/normal-sprite/" + data.name.toString() + ".gif";
-                try {
-                    document.getElementById("type2").innerHTML = data.types[1].type.name;
-                }
-                catch(err) {
-                    //if there isn't a type[1] (meaning we only have one type), do nothing.
-                }
-            }
-        </script>
-
     </body>
 </html>
