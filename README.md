@@ -12,11 +12,13 @@ A program that allows you to create randomized Pokemon Teams from the regions of
 * Implement the 6 rounds.
 * Implement restrictions.
 * Inplement number of players and respective team building.
-* Implement pictures from PokeApi.
+* ~Implement pictures from PokeApi.~
 * Implement CSS and nicer HTML styling.
-* Implement lootbox-style roller animation.
+* ~Implement lootbox-style roller animation.~
 * Implement CSV output to put team data into a spreadsheet template.
-* Implement types for pokemon
+* Implement an option to generate natures.
+* ~Implement checker that removes duplicates from the same team.~
+* Implement evolution lines data to ensure all Pokemon are from different lines.
 
 
 Coding and implementation by Jarett Sutula
